@@ -14,7 +14,7 @@ namespace LCode
 
     // this has a template; all method definitions will be in .tcpp file
     template <typename ElemT>
-    class List
+    class LinkedList
     {
         class Node
         {
@@ -76,9 +76,9 @@ namespace LCode
         size_t list_size;
 
     public:
-        List();
+        LinkedList();
 
-        List(List<ElemT> & other);
+        LinkedList(LinkedList<ElemT> & other);
 
         void append(ElemT new_element);
 

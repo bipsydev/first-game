@@ -4,18 +4,18 @@ namespace LCode
 {
 
 template <typename ElemT>
-List<ElemT>::List()
+LinkedList<ElemT>::LinkedList()
 : head{nullptr}, tail{nullptr}, list_size{0}
 { }
 
 template <typename ElemT>
-List<ElemT>::List(List<ElemT> & other)
+LinkedList<ElemT>::LinkedList(LinkedList<ElemT> & other)
 {
     /* TODO: copy elements over from other list */
 }
 
 template <typename ElemT>
-void List<ElemT>::append(ElemT new_element)
+void LinkedList<ElemT>::append(ElemT new_element)
 {
     // allocate node from element data
     Node * new_node = new Node{new_element};

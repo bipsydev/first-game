@@ -18,22 +18,22 @@ int main(int argc, char * argv[])
     Utils::list_cmd_args(argc, argv, true);
     cout << '\n';
 
-    LCode::List<string> names;
+    LinkedList<string> names;
     string input;
     do
     {
-        input = LCode::say_hi();
+        input = say_hi();
         if (input.length() > 0)
         {
             names.append(input);
         }
     } while (input.length() != 0);
 
-    std::cout << "\n---- ALL NAMES ENTERED: ----\n";
+    cout << "\n---- ALL NAMES ENTERED: ----\n";
     for (size_t i = 0; i < names.size(); i++)
     {
         string name = names[i];
-        std::cout << name << '\n';
+        cout << name << '\n';
     }
 
     return EXIT_SUCCESS;
