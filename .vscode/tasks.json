@@ -27,12 +27,13 @@
                 "-fno-gnu-keywords",
                 "-fdiagnostics-color=always",
                 "-pedantic",
-                "-D",
-                "TEMPLATE_SEPARATE_COMPILATION",
+                "-D", "TEMPLATE_SEPARATE_COMPILATION",
+                "-D", "LINUX_BUILD",
+                "-I", "./include",
                 "-g",
-                "*.cpp",
+                "src/*.cpp",
                 "-o",
-                "build\\${workspaceFolderBasename}.exe"
+                "build/${workspaceFolderBasename}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

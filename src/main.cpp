@@ -1,31 +1,22 @@
 #include "linked_list.hpp"
+#include "utils.hpp"
 
 #include <cstdlib>      // EXIT_SUCCESS
 #include <cassert>      // assert
 #include <iostream>     // cin, cout
 #include <string>       // string, getline
 
-using std::cin, std::cout;
-using std::string;
 
 int main(int argc, char * argv[])
 {
-    #ifndef NDEBUG
-        cout << "[Running in Debug Mode.]\n";
-    #endif
+    using namespace LCode;
+    using std::cout, std::string;
 
-    #ifdef TEMPLATE_SEPARATE_COMPILATION
-        cout << "[Template Class Separate Compilation is active.]\n";
-    #endif
-
-    if (argc > 1)
-    {
-        cout << "Command line arguments given:\n";
-        for (int i = 0; i < argc; ++i)
-        {
-            cout << '"' << argv[i] << "\"\n";
-        }
-    }
+    cout << "***** Checking compiler symbols... *****\n";
+    Utils::check_platform();
+    cout << "\n***** Checking runtime arguments... *****\n";
+    Utils::list_cmd_args(argc, argv, true);
+    cout << '\n';
 
     LCode::List<string> names;
     string input;

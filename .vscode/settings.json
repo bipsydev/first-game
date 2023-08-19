@@ -1,11 +1,10 @@
 {
     "files.associations": {
         "*html": "html",
-        // the following are for template class member definition files:
         "*.tc": "cpp",
         "*.tcpp": "cpp",
-        "*.htdef": "cpp", // I added this for definition of template classes
-        "*.h": "cpp",   // I use this for class
+        "*.htdef": "cpp",
+        "*.h": "cpp",
         "any": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -81,6 +80,11 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "both.C": "cpp"
+        "both.C": "cpp",
+        "*.tcc": "cpp",
+        "charconv": "cpp",
+        "format": "cpp",
+        "span": "cpp",
+        "stdfloat": "cpp"
     }
 }

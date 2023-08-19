@@ -107,7 +107,7 @@ namespace LCode
 
 // Needed for separate compilation of template functions
 #ifdef TEMPLATE_SEPARATE_COMPILATION
-    #include "linked_list.tcpp"
+    #include "../src/linked_list.tcpp"
 #endif
 
 #endif // LCODE_LIST_H
