@@ -6,18 +6,25 @@
 #include <iostream>     // cin, cout
 #include <string>       // string, getline
 
+using namespace LCode;
+using std::cout, std::string;
+
+void enter_names();
 
 int main(int argc, char * argv[])
 {
-    using namespace LCode;
-    using std::cout, std::string;
-
     cout << "***** Checking compiler symbols... *****\n";
     Utils::check_platform();
     cout << "\n***** Checking runtime arguments... *****\n";
     Utils::list_cmd_args(argc, argv, true);
     cout << '\n';
 
+    return EXIT_SUCCESS;
+}
+
+void enter_names()
+{
+    
     LinkedList<string> names;
     string input;
     do
@@ -35,6 +42,4 @@ int main(int argc, char * argv[])
         string name = names[i];
         cout << name << '\n';
     }
-
-    return EXIT_SUCCESS;
 }
