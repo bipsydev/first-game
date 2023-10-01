@@ -5,9 +5,9 @@
             "label": "g++ Build Project",
             "command": "g++",
             "args": [
-                // nano or cat this on Harper Ares: /usr/local/bin/CPP
-                // ALL GCC ARGS COPIED FROM CPP COMMAND ON HARPER ARES:
                 "-std=c++17",
+
+                // warnings I like to use
                 "-Wall",
                 "-Wextra",
                 "-Wfloat-equal",
@@ -23,17 +23,29 @@
                 "-Wshadow",
                 "-Wold-style-cast",
                 "-Wconversion",
-                //"-Wunused-parameter", // not sure about this one
-                "-fno-gnu-keywords",
-                "-fdiagnostics-color=always",
+                "-Wunused-parameter",
+
+                "-fno-gnu-keywords",    // unrecognize `typeof`
+                "-fdiagnostics-color=always", // get debug colors
                 "-pedantic",
-                "-D", "TEMPLATE_SEPARATE_COMPILATION",
-                "-D", "LINUX_BUILD",
+
+                // Define symbols
+                "-D", "TEMPLATE_SEPARATE_COMPILATION",  // for .tcpp files
+
+                // Directories to add to include path for headers
                 "-I", "./include",
-                "-g",
+
+                // Libraries to link with
+                "-l", "raylib",
+
+                
+                "-g",   // needed for gdb
+
+                // input all .cpp files in src directory
                 "src/*.cpp",
-                "-o",
-                "build/${workspaceFolderBasename}"
+
+                // output executable to build directory
+                "-o", "build/${workspaceFolderBasename}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
