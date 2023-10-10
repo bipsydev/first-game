@@ -3,23 +3,20 @@
 #include <string>
 #include <iostream>
 
-
-
 int main(int argc, char * argv[])
 {
     //TODO process command-line arguments
     //TODO show launcher window if command-line arguments don't fill all values
-    
+
+    const int WIDTH = 1280, HEIGHT = 720;
+    const std::string MESSAGE = "Congrats! You created your first window!";
+    const int FONT_SIZE = 26;
     try
     {
-        const int WIDTH = 1280;
-        const int HEIGHT = 720;
         raylib::Window window{WIDTH, HEIGHT, "Raylib C++ - Basic Window!"};
 
         raylib::Texture logo{"raylib_logo.png"};
 
-        const std::string MESSAGE = "Congrats! You created your first window!";
-        const int FONT_SIZE = 20;
         raylib::Text text{raylib::Font{}, MESSAGE, FONT_SIZE, 0, LIGHTGRAY};
         const raylib::Vector2 TEXT_SIZE = text.MeasureEx();
         const raylib::Vector2 TEXT_POS = {static_cast<float>(WIDTH)/2.0f - TEXT_SIZE.GetX()/2.0f,
@@ -32,7 +29,7 @@ int main(int argc, char * argv[])
         while (!window.ShouldClose()) // Detect window close button or ESC key
         {
             // Update
-            // TODO: Update your variables here
+            // TODO Update your variables here
 
             // Draw
             window.BeginDrawing();
@@ -51,7 +48,7 @@ int main(int argc, char * argv[])
         window.Close();
 
     }
-    catch(const raylib::RaylibException& e)
+    catch(const raylib::RaylibException & e)
     {
         std::cerr << e.what() << '\n';
     }
