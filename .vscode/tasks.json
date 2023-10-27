@@ -45,7 +45,7 @@
                 "src/*.cpp",
 
                 // output executable to build directory
-                "-o", "build/${workspaceFolderBasename}"
+                "-o", "${workspaceFolder}/build/${workspaceFolderBasename}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
