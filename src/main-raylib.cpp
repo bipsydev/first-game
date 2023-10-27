@@ -1,3 +1,6 @@
+
+#ifdef USE_RAYLIB_EXAMPLE
+
 #include <raylib-cpp.hpp>
 
 #include <string>
@@ -55,3 +58,5 @@ int main(int argc, char * argv[])
 
     return 0;
 }
+
+#endif
